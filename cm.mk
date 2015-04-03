@@ -26,11 +26,11 @@ TARGET_UNOFFICIAL_BUILD_ID := LegacyHuawei
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/u8800/full_u8800.mk)
+$(call inherit-product, device/huawei/u8800pro/full_u8800pro.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := u8800
-PRODUCT_NAME := cm_u8800
-PRODUCT_MODEL := IDEOS X5
+PRODUCT_DEVICE := u8800pro
+PRODUCT_NAME := cm_u8800pro
+PRODUCT_MODEL := IDEOS X5 PRO
 PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := Huawei

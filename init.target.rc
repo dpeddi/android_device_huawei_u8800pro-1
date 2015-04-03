@@ -15,6 +15,12 @@
 #
 
 on init
+    # Bluetooth
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwrite
+    chmod 0220 /proc/bluetooth/sleep/lpm
+    chmod 0220 /proc/bluetooth/sleep/btwrite
+
     # Sensors
     chown system system /dev/aps-12d
     chmod 0660 /dev/aps-12d
@@ -25,7 +31,3 @@ on init
 
 on post-fs-data
     mkdir /data/misc/sensors 0770 system system
-
-# SDC3 (SDIO) needs to have polling enabled
-on property:wlan.driver.status=loading
-    write /sys/devices/platform/msm_sdcc.3/polling 1

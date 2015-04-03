@@ -18,6 +18,6 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME	"IDEOS X5"
+#define BTM_DEF_LOCAL_NAME	"IDEOS X5 PRO"
 
 #endif

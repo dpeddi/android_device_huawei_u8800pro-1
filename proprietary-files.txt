@@ -33,34 +33,31 @@ system/lib/libdiag.so
 system/lib/libdsi_netctrl.so
 system/lib/libdsm.so
 system/lib/libdsutils.so
-system/lib/libgsdi_exp.so
-system/lib/libgstk_exp.so
 system/lib/libhwrpc.so
 system/lib/libidl.so
-system/lib/libmmgsdilib.so
 system/lib/libnetmgr.so
 system/lib/libnv.so
 system/lib/liboncrpc.so
 system/lib/libpbmlib.so
+system/lib/libqdi.so
 system/lib/libqdp.so
+system/lib/libqmiservices.so
 system/lib/libqmi.so
 system/lib/libqueue.so
 system/lib/libril-qcril-hook-oem.so
 system/lib/libwms.so
 system/lib/libwmsts.so
 
-# Wi-Fi firmware
-system/etc/firmware/wlan/cfg.dat
-system/etc/firmware/wlan/qcom_cfg.ini
-system/etc/firmware/wlan/qcom_fw.bin
-system/etc/firmware/wlan/qcom_wapi_fw.bin
-system/etc/firmware/wlan/qcom_wlan_nv.bin
+# Additional Huawei modem files
+system/bin/modempre
+system/bin/oem_rpc_svc
+system/lib/liboem_rapi.so
 
-# Wi-Fi module
-system/lib/modules/wlan.ko
+# Wi-Fi calibration
+system/etc/wifi/bcmdhd.cal
 
-# BT firmware loader
-system/bin/hci_qcomm_init
+# Bluetooth firmware
+system/vendor/firmware/bcm4329.hcd
 
 # Camera libraries
 system/lib/libchromatix_s5k4e1gx_p_default_video.so
@@ -71,9 +68,3 @@ system/lib/libgemini.so
 system/lib/libmmipl.so
 system/lib/libmmjpeg.so
 system/lib/liboemcamera.so
-
-# FM radio firmware loader
-system/bin/fm_qsoc_patches
-
-# FM radio dependencies
-system/lib/libqmiservices.so

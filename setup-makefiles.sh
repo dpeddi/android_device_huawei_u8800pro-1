@@ -17,7 +17,7 @@
 #
 
 VENDOR=huawei
-DEVICE=u8800
+DEVICE=u8800pro
 
 # Get the script location no matter where it's started from.
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

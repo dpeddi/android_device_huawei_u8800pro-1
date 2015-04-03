@@ -24,12 +24,12 @@
 USE_CAMERA_STUB := true
 
 # Inherit from proprietary
-include vendor/huawei/u8800/BoardConfigVendor.mk
+include vendor/huawei/u8800pro/BoardConfigVendor.mk
 
 # Inherit from common
 include device/huawei/msm7x30-common/BoardConfigCommon.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := u8800
+TARGET_BOOTLOADER_BOARD_NAME := u8800pro
 
 # We don't build bootloader nor radio.
 TARGET_NO_BOOTLOADER := true
@@ -39,33 +39,28 @@ TARGET_NO_RADIOIMAGE := true
 BOARD_PROVIDES_LIBRIL := true
 
 # Wi-Fi
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_HAS_QCOM_WLAN := true
+BOARD_WLAN_DEVICE := bcmdhd
+BOARD_HAS_QCOM_WLAN := false
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 HOSTAPD_VERSION := VER_0_8_X
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
-WIFI_DRIVER_MODULE_NAME := "wlan"
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/bcmdhd.ko"
+WIFI_DRIVER_MODULE_NAME := "bcmdhd"
 WIFI_DRIVER_MODULE_ARG := ""
-WIFI_EXT_MODULE_PATH := "/system/lib/modules/librasdioif.ko"
-WIFI_EXT_MODULE_NAME := "librasdioif"
-WIFI_EXT_MODULE_ARG := ""
-WIFI_DRIVER_FW_PATH_STA := "sta"
-WIFI_DRIVER_FW_PATH_AP := "ap"
-WIFI_DRIVER_FW_PATH_P2P := "p2p"
+WIFI_DRIVER_FW_PATH_PARAM := "/sys/module/bcmdhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA := "/vendor/firmware/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_AP := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8800/bluetooth
-
-# FM
-BOARD_HAVE_QCOM_FM := true
-AUDIO_FEATURE_ENABLED_FM := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_BLUEDROID_VENDOR_CONF := device/huawei/u8860/bluetooth/vnd_u8860.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8860/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := u8800_defconfig
+TARGET_KERNEL_CONFIG := u8800pro_defconfig
 
 # Generic flags
 BOARD_USE_LEGACY_SENSORS_FUSION := true

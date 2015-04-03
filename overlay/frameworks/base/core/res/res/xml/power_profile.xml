@@ -22,11 +22,11 @@
   <item name="none">0</item>
   <item name="screen.on">40</item>
   <item name="screen.full">120</item>
-  <item name="bluetooth.active">80</item> <!-- Bluetooth data transfer -->
+  <item name="bluetooth.active">32</item> <!-- Bluetooth data transfer -->
   <item name="bluetooth.on">0.3</item>  <!-- Bluetooth on & connectable, but not connected -->
-  <item name="wifi.on">4</item>
-  <item name="wifi.active">100</item>  <!-- WIFI data transfer -->
-  <item name="wifi.scan">120</item>  <!-- WIFI network scanning -->
+  <item name="wifi.on">0.3</item>
+  <item name="wifi.active">83</item>  <!-- WIFI data transfer -->
+  <item name="wifi.scan">52</item>  <!-- WIFI network scanning -->
   <item name="dsp.audio">34</item>
   <item name="dsp.video">265</item>
   <item name="radio.active">242</item>

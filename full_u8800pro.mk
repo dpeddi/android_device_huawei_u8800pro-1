@@ -24,15 +24,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 
-# Inherit from u8800 device
-$(call inherit-product, device/huawei/u8800/device.mk)
+# Inherit from u8800pro device
+$(call inherit-product, device/huawei/u8800pro/device.mk)
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_NAME := full_u8800
-PRODUCT_DEVICE := u8800
-PRODUCT_MODEL := U8800
+PRODUCT_NAME := full_u8800pro
+PRODUCT_DEVICE := u8800pro
+PRODUCT_MODEL := U8800PRO
 PRODUCT_BRAND := Huawei
 PRODUCT_MANUFACTURER := Huawei

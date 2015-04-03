@@ -16,34 +16,30 @@
 #
 
 # Include proprietary
-$(call inherit-product, vendor/huawei/u8800/u8800-vendor.mk)
+$(call inherit-product, vendor/huawei/u8800pro/u8800pro-vendor.mk)
 
 # Include common
 $(call inherit-product, device/huawei/msm7x30-common/msm7x30.mk)
 
-# Include keyboards
-$(call inherit-product, device/huawei/u8800/keyboards/keyboards.mk)
+# Include broadcom firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/huawei/u8800/overlay
+# Include keyboards
+$(call inherit-product, device/huawei/u8800pro/keyboards/keyboards.mk)
+
+DEVICE_PACKAGE_OVERLAYS += device/huawei/u8800pro/overlay
 
 # Init scripts
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/init.target.rc:root/init.target.rc
 
-# Configs
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/init.qcom.fm.sh:system/etc/init.qcom.fm.sh
+# Additional packages
+PRODUCT_PACKAGES += \
+	libnetcmdiface
 
 # HAL
 PRODUCT_PACKAGES += \
-	sensors.u8800
-
-# FM radio
-PRODUCT_PACKAGES += \
-	qcom.fmradio \
-	libqcomfm_jni \
-	FM2 \
-	FMRecord
+	sensors.u8800pro
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
